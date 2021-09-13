@@ -14,9 +14,6 @@ RUN npm ci \
 
 FROM node:16.8-alpine3.11
 
-ARG TEST_ARG
-ENV TEST_ENV $TEST_ARG
-
 ENV NODE_ENV production
 
 USER node
