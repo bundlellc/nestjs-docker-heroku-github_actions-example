@@ -19,4 +19,4 @@ jobs:
           docker_build_args: |
             TEST_ARG
         env:
-          TEST_ARG: ${{secrets.TEST_ENV}
+          TEST_ARG: ${{secrets.TEST_ENV}}
