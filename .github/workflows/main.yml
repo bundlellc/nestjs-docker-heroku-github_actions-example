@@ -3,7 +3,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
+      - example/env-vars
 
 jobs:
   build:
@@ -16,3 +16,7 @@ jobs:
           heroku_app_name: "nestjs-docker-heroku-example"
           heroku_email: "shariqhirani2010@gmail.com"
           usedocker: true
+          docker_build_args: |
+            TEST_ARG
+        env:
+          TEST_ARG: ${{secrets.TEST_ENV}
